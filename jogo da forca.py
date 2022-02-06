@@ -22,11 +22,11 @@ def printarErro(erro):
     elif erro == 5:
         print('O'.center(50))
         print('\|/'.center(50))
-        print('/| '.center(50))
+        print('/   '.center(50))
     elif erro == 6:
         print('O'.center(50))
         print('\|/'.center(50))
-        print('/|\ '.center(50))
+        print('/ \ '.center(50))
 
 
 
@@ -72,9 +72,9 @@ def rodarJogo():
                     print('Tentar novamente? Y ou N - ', end='')
                     esc = input()
 
-                    if esc.strip().upper() == 'Y':
+                    if esc.replace("  ", " ").strip().upper() == 'Y':
                         rodarJogo()
-                    if esc.strip().upper() == 'N':
+                    if esc.replace("  ", " ").strip().upper() == 'N':
                         break
         else:
             print('Insira apenas um cáracter\n')
